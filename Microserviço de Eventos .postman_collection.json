@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "a5f9fbeb-5b12-4a24-969a-1c574cfa90ab",
+		"name": "Microserviço de Eventos ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7129537"
+	},
+	"item": [
+		{
+			"name": "Listar todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8089/eventos",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"eventos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos por data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8089/eventos/porData",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"eventos",
+						"porData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Participante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailParticipante\": \"deivisonoliveira.info@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8089/eventos/1/registrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"eventos",
+						"1",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Evento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantidadeMaximaParticipantes\": 20,\r\n    \"data\": \"23/06/2024\",\r\n    \"titulo\": \"Workshop Java 21\",\r\n    \"descricao\": \"Neste Workshop Java 21 será apresentada novas features desta importante ferramenta!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8089/eventos",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"eventos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

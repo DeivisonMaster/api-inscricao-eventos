@@ -1,15 +1,17 @@
-# API Spring Boot de Eventos
+# Micro Serviço de gerenciamento de Eventos
 
 **API Spring Boot 3.x para registro de participantes em eventos**
 
 ## O que foi desenvolvido
-**Foi desenvolvido um serviço de envio de emails que recebe os dados de um cliente como destino, assunto e mensagem e envia estes dados ao seu destino.**
-**A aplicação foi implantada em uma instância EC2 mas por questões de custos, o serviço esta offline.**
+**A aplicação é um micro serviço que se comunica com uma API externa de envio de e-mails utilizando Amazon SES. **
+**Para cada novo participante registrado em um evento, um e-mail utilizando o serviço externo é disparado como confirmação de cadastro. **
+**A aplicação é responsavel por cadastrar novo evento, listar todos os eventos cadastrados, filtrar os eventos por data e registrar novos participantes.**
 
-**Foi escolhido o nivel Pleno para o desafio <br/>**
-**O Java na versão 17 foi escolhido como linguagem. <br/>**
-**Utilizado padrão Restful para o desenvolvimento do serviço. <br/>**
-**Dentro do requisito tecnico, foi escolhido a trilha de back-end com um minimo de front-end sendo a documentação via API Docs.**
+
+**Possibilidade de Melhoria:** 
+- para garantir que os e-mails de notificação sejam enviados, micro serviço de evento depender diretamente de um middleware de gerenciamento de filas 
+para caso o serviço de e-mails esteja indisponivel no momento
+
 
 ## Tecnologias
 
@@ -27,7 +29,7 @@
 
 **Inicie a aplicação usando qualquer um dos comandos abaixo**
 
-> **Nota:** Para os dois primeiros comandos, é necessario executar dentro da pasta raiz do projeto i.e **email-service** pasta
+> **Nota:** Para os dois primeiros comandos, é necessario executar dentro da pasta raiz do projeto i.e **ms-evento** pasta
 
 - **Usando maven** ``` mvn spring-boot:run```
 
@@ -46,9 +48,7 @@ Se a porta 8080 estiver ocupada em seu sistema, então voce pode mudar o numero 
 
 <br/>
 
-**Envie uma requisição POST para o endpoint '/eventos' endpoint usando um aplicativo terceiro como o Postman**
-
-## Acesso a API Docs
-- **Swagger** ``` http://localhost:8080/swagger-ui.html ```
-- **API Docs** ``` http://localhost:8080/v3/api-docs ```
+**Envie uma requisição POST para o endpoint '/eventos' usando um aplicativo terceiro como o Postman**
+<br/>
+**O arquivo .json de Collections da API esta disponivel na pasta raiz da aplicação ***`
 

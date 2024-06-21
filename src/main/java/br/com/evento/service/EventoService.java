@@ -60,7 +60,7 @@ public class EventoService {
 		Inscricao inscricao = new Inscricao(evento, emailParticipante);
 		inscricaoRepository.save(inscricao);
 		
-		EmailRequisicaoDTO emailRequisicao = new EmailRequisicaoDTO(emailParticipante, "Confirmação de Inscrição", "Você foi inscrito no evento com sucesso!");
+		EmailRequisicaoDTO emailRequisicao = new EmailRequisicaoDTO(emailParticipante, "Confirmação de Inscrição", "Olá, você foi inscrito no evento com sucesso!");
 		emailService.enviaEmail(emailRequisicao);
 	}
 
