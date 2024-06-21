@@ -3,8 +3,8 @@
 **API Spring Boot 3.x para registro de participantes em eventos**
 
 ## O que foi desenvolvido
-**A aplicação é um micro serviço que se comunica com uma API externa de envio de e-mails utilizando Amazon SES. **
-**Para cada novo participante registrado em um evento, um e-mail utilizando o serviço externo é disparado como confirmação de cadastro. **
+**A aplicação é um micro serviço que se comunica com uma API externa de envio de e-mails utilizando Amazon SES.**
+**Para cada novo participante registrado em um evento, um e-mail utilizando o serviço externo é disparado como confirmação de cadastro.**
 **A aplicação é responsavel por cadastrar novo evento, listar todos os eventos cadastrados, filtrar os eventos por data e registrar novos participantes.**
 
 
@@ -50,5 +50,5 @@ Se a porta 8080 estiver ocupada em seu sistema, então voce pode mudar o numero 
 
 **Envie uma requisição POST para o endpoint '/eventos' usando um aplicativo terceiro como o Postman**
 <br/>
-**O arquivo .json de Collections da API esta disponivel na pasta raiz da aplicação ***`
+**O arquivo .json de Collections da API esta disponivel na pasta raiz da aplicação***`
 

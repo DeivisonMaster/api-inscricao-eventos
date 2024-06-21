@@ -50,7 +50,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"emailParticipante\": \"deivisonoliveira.info@gmail.com\"\r\n}",
+					"raw": "{\r\n    \"emailParticipante\": \"seu_email@email.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
